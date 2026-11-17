@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_products
+    description: "Staging model for product data"
+
+    columns:
+      - name: product_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product_name
+        data_tests:
+          - not_null
+
+      - name: category
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Accessories
+                  - Electronics
+                  - Furniture
+                  - "Home & Living"
+                  - Stationery
+
+      - name: selling_price
+        data_tests:
+          - not_null

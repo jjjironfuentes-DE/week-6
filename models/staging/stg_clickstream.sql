@@ -1,0 +1,8 @@
+SELECT
+    event_id,
+    customer_id,
+    event_type,
+    page_url,
+    event_timestamp,
+    device_type
+FROM {{ source('raw_data', 'clickstream') }}

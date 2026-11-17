@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_clickstream
+    description: "Staging model for clickstream event data"
+
+    columns:
+      - name: event_id
+        description: "Unique identifier for each event"
+        data_tests:
+          - not_null
+
+      - name: customer_id
+        description: "Identifier of the customer associated with the event"
+
+      - name: event_type
+        description: "Type of event performed by the customer"
+        data_tests:
+          - not_null
+
+      - name: page_url
+        description: "URL of the page visited"
+
+      - name: event_timestamp
+        description: "Timestamp when the event occurred"
+
+      - name: device_type
+        description: "Type of device used by the customer"

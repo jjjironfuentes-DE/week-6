@@ -1,0 +1,5 @@
+segment_id,segment_name,description
+1,New Customer,Recently registered customers
+2,Regular Customer,Customers with recurring purchases
+3,VIP Customer,High value customers
+4,Inactive Customer,Customers with no recent purchases
